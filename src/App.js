@@ -1,10 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
+import Shopping from "./Major/ShoppingApp/Shopping";
 
 function App() {
   return (
     <div>
-      <h1>HELLO</h1>
+      <Shopping></Shopping>
     </div>
   );
 }
