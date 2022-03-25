@@ -3,12 +3,10 @@ import Cartlist from "../Cart/CartList";
 import FoodList from "../List/FoodList";
 const Shopping = () => {
   return (
-    <div>
-      <CartProvider>
-        <Cartlist />
-        <FoodList />
-      </CartProvider>
-    </div>
+    <CartProvider>
+      <Cartlist />
+      <FoodList />
+    </CartProvider>
   );
 };
 export default Shopping;
