@@ -1,12 +1,20 @@
-import CartProvider from "../../store/CartProvider";
+import CartContext from "../../store/CartContext";
+//import CartProvider from "../../store/CartProvider";
 import Cartlist from "../Cart/CartList";
 import FoodList from "../List/FoodList";
 const Shopping = () => {
   return (
-    <CartProvider>
+    <CartContext.Provider
+      value={{
+        cartitems: [],
+        totalAmount: 0,
+        additem: (item) => {},
+        removeitem: (id) => {},
+      }}
+    >
       <Cartlist />
       <FoodList />
-    </CartProvider>
+    </CartContext.Provider>
   );
 };
 export default Shopping;
