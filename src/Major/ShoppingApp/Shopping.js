@@ -6,7 +6,7 @@ const Shopping = () => {
   return (
     <CartContext.Provider
       value={{
-        cartitems: "hithere",
+        cartitems: "hi there",
         totalAmount: 0,
         additem: (item) => {},
         removeitem: (id) => {},
