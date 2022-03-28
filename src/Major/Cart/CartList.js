@@ -4,10 +4,11 @@ import CartContext from "../../store/CartContext";
 const Cartlist = () => {
   const crtctx = useContext(CartContext);
 
-  const totalItems = crtctx.items.reduce((curNumber, item) => {
-    return curNumber + item.quantity;
-  }, 0);
-  console.log(totalItems);
+  // const totalItems = crtctx.cartitems.reduce((curNumber, item) => {
+  //   return curNumber + item.quantity;
+  // }, 0);
+  const totalItems = crtctx.cartitems;
+  console.log(crtctx.cartitems);
 
   return (
     <div>
