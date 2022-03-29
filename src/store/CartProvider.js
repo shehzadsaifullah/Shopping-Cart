@@ -1,4 +1,4 @@
-import CartContext from "./CartContext";
+import CartContext from "./cart-context";
 import { useReducer } from "react";
 
 const CartProvider = (props) => {

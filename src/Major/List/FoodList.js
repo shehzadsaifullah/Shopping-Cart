@@ -26,7 +26,7 @@ const DUMMY_MEALS = [
   },
 ];
 
-const FoodList = () => {
+const FoodList = (props) => {
   return (
     <div>
       {DUMMY_MEALS.map((item) => (
