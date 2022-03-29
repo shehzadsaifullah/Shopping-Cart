@@ -5,11 +5,15 @@ import Cartlist from "../Cart/CartList";
 import FoodList from "../List/FoodList";
 
 const Shopping = () => {
+  const [cart, setCart] = useState();
+
   return (
-    <div>
-      <Cartlist />
-      <FoodList />
-    </div>
+    <CartContext.Provider value={{ cartitems: "dumb dumb", totalAmount: 0 }}>
+      <div>
+        <Cartlist />
+        <FoodList cart={cart} setCart={setCart} />
+      </div>
+    </CartContext.Provider>
   );
 };
 export default Shopping;

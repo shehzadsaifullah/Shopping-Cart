@@ -13,12 +13,7 @@ const Card = (props) => {
     console.log(props.listitem.id, inputQuantityValue.current.value);
   };
   return (
-    <CartContext.Provider
-      value={{
-        cartitems: itemsState,
-        totalAmount: amounState,
-      }}
-    >
+    <div>
       <div>
         <ul>
           <div>{props.listitem.name}</div>
@@ -37,7 +32,7 @@ const Card = (props) => {
         ></input>
         <button onClick={addToCartHandler}>add to card</button>
       </div>
-    </CartContext.Provider>
+    </div>
   );
 };
 export default Card;
