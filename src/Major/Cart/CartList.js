@@ -7,7 +7,7 @@ const Cartlist = () => {
   // const totalItems = crtctx.cartitems.reduce((curNumber, item) => {
   //   return curNumber + item.quantity;
   // }, 0);
-  const totalItems = crtctx.totalAmount;
+  const totalItems = crtctx.cartitems;
   console.log(crtctx.totalAmount);
 
   return (

@@ -1,15 +1,18 @@
 import CartContext from "../../store/cart-context";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
 const Card = (props) => {
   const inputQuantityValue = useRef();
-
+  // use context here
+  const ctx = useContext(CartContext);
   const [itemsState, setItemsState] = useState();
   const [amounState, setAmountState] = useState();
 
-  const addToCartHandler = () => {
-    setItemsState(inputQuantityValue.current.value);
-    setAmountState("100");
+  const addToCartHandler = (e) => {
+    // setItemsState(inputQuantityValue.current.value);
+    // setAmountState(inputQuantityValue.current.value);
+    // set context value/update value
+    ctx.setCartItems(inputQuantityValue.current.value);
     console.log("CAERRRR", props.listitem.id, inputQuantityValue.current.value);
   };
   return (
@@ -22,7 +25,7 @@ const Card = (props) => {
         </ul>
       </div>
       <div>
-        <label>Quantity</label>
+        <label>Quantity </label>
         <input
           type="number"
           min="0"
