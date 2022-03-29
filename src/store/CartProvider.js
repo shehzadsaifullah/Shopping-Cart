@@ -1,15 +1,15 @@
 import CartContext from "./cart-context";
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 const CartProvider = (props) => {
   const addCardItemHandler = (item) => {};
   const removeCartItemHandler = (id) => {};
 
+  const [] = useState();
+
   const cartContext = {
-    items: [],
-    totalAmount: 0,
-    additem: addCardItemHandler,
-    removeitem: removeCartItemHandler,
+    cartitems: "HELLO",
+    totalAmount: 1000,
   };
 
   return (

@@ -10,7 +10,7 @@ const Card = (props) => {
   const addToCartHandler = () => {
     setItemsState(inputQuantityValue.current.value);
     setAmountState("100");
-    console.log(props.listitem.id, inputQuantityValue.current.value);
+    console.log("CAERRRR", props.listitem.id, inputQuantityValue.current.value);
   };
   return (
     <div>

@@ -1,8 +1,8 @@
 import React from "react";
 
 const CartContext = React.createContext({
-  cartitems: " ",
-  totalAmount: 0,
+  cartitems: " context definition",
+  totalAmount: 10,
 });
 
 export default CartContext;
