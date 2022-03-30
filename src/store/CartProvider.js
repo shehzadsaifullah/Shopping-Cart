@@ -2,14 +2,15 @@ import CartContext from "./cart-context";
 import { useState, useEffect } from "react";
 
 const CartProvider = (props) => {
-  const [item, setItem] = useState({
+  const a = {
     cartItemname: "",
     cartItemquantity: "",
     cartItemprice: "",
-  });
-  const [itemName, setItemName] = useState();
-  const [itemQuantity, setitemQuantity] = useState();
-  const [itemPrice, setItemPrice] = useState();
+  };
+  const [item, setItem] = useState({});
+  // const [itemName, setItemName] = useState();
+  // const [itemQuantity, setitemQuantity] = useState();
+  // const [itemPrice, setItemPrice] = useState();
   const [total, setTotal] = useState();
 
   const setCartItem = (name, quantity, price) => {
@@ -19,20 +20,24 @@ const CartProvider = (props) => {
       cartItemquantity: quantity,
       cartItemprice: price,
     });
-    setItemName(name);
-    setitemQuantity(quantity);
-    setItemPrice(price);
+    // setItemName(name);
+    // setitemQuantity(quantity);
+    // setItemPrice(price);
   };
 
   const setTotalAmount = () => {
     setTotal(1000);
   };
   const cartContext = {
-    cartitem: item,
-    totalAmount: 0,
+    cartitems: item,
+    totalAmount: 10000,
     setCartItem: setCartItem,
     setTotalAmount: setTotalAmount,
   };
+
+  useEffect(() => {
+    setItem(a);
+  }, []);
 
   return (
     <CartContext.Provider value={cartContext}>

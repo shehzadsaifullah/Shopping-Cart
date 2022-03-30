@@ -7,6 +7,7 @@ const Card = (props) => {
   const ctx = useContext(CartContext);
 
   const addToCartHandler = (e) => {
+    console.log(props.listitem.name);
     ctx.setCartItem(
       props.listitem.name,
       inputQuantityValue.current.value,
