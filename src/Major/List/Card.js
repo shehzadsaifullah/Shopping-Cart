@@ -5,16 +5,13 @@ const Card = (props) => {
   const inputQuantityValue = useRef();
   // use context here
   const ctx = useContext(CartContext);
-  const [itemsState, setItemsState] = useState();
-  const [amounState, setAmountState] = useState();
 
   const addToCartHandler = (e) => {
-    // setItemsState(inputQuantityValue.current.value);
-    // setAmountState(inputQuantityValue.current.value);
-    // set context value/update value
-    ctx.setCartItemName(props.listitem.name);
-    ctx.setCartItemQuantity(inputQuantityValue.current.value);
-    ctx.setCartItemPrice(props.listitem.price);
+    ctx.setCartItem(
+      props.listitem.name,
+      inputQuantityValue.current.value,
+      props.listitem.price
+    );
     ctx.setTotalAmount();
   };
   return (
