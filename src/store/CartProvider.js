@@ -14,8 +14,7 @@ const CartProvider = (props) => {
   const [total, setTotal] = useState();
 
   const setCartItem = (name, quantity, price) => {
-    setItem({
-      ...item,
+    setItem(...item, {
       cartItemname: name,
       cartItemquantity: quantity,
       cartItemprice: price,
