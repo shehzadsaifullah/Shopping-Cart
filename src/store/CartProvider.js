@@ -2,22 +2,33 @@ import CartContext from "./cart-context";
 import { useReducer, useState } from "react";
 
 const CartProvider = (props) => {
-  const [item, setItem] = useState([]);
+  const [itemName, setItemName] = useState();
+  const [itemQuantity, setitemQuantity] = useState();
+  const [itemPrice, setItemPrice] = useState();
   const [total, setTotal] = useState();
-  const addCardItemHandler = (item) => {};
-  const removeCartItemHandler = (id) => {};
 
-  const setCartItems = (val) => {
-    setItem(val);
+  const setCartItemName = (name) => {
+    setItemName(name);
   };
 
+  const setCartItemQuantity = (quantity) => {
+    setitemQuantity(quantity);
+  };
+
+  const setCartItemPrice = (price) => {
+    setItemPrice(price);
+  };
   const setTotalAmount = () => {
     setTotal(1000);
   };
   const cartContext = {
-    cartitems: item,
+    cartitemName: itemName,
+    cartitemQuantity: itemQuantity,
+    cartItemPrice: itemPrice,
     totalAmount: total,
-    setCartItems: setCartItems,
+    setCartItemName: setCartItemName,
+    setCartItemQuantity: setCartItemQuantity,
+    setCartItemPrice: setCartItemPrice,
     setTotalAmount: setTotalAmount,
   };
 

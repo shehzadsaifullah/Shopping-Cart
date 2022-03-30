@@ -12,8 +12,10 @@ const Card = (props) => {
     // setItemsState(inputQuantityValue.current.value);
     // setAmountState(inputQuantityValue.current.value);
     // set context value/update value
-    ctx.setCartItems(inputQuantityValue.current.value);
-    console.log("CAERRRR", props.listitem.id, inputQuantityValue.current.value);
+    ctx.setCartItemName(props.listitem.name);
+    ctx.setCartItemQuantity(inputQuantityValue.current.value);
+    ctx.setCartItemPrice(props.listitem.price);
+    ctx.setTotalAmount();
   };
   return (
     <div>
@@ -33,7 +35,7 @@ const Card = (props) => {
           defaultValue="0"
           ref={inputQuantityValue}
         ></input>
-        <button onClick={addToCartHandler}>add to card</button>
+        <button onClick={addToCartHandler}>Add to Cart</button>
       </div>
     </div>
   );

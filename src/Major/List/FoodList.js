@@ -30,11 +30,8 @@ const DUMMY_MEALS = [
 ];
 
 const FoodList = (props) => {
-  const ctx = useContext(CartContext);
   return (
     <div>
-      <button onClick={ctx.setTotalAmount}> Fawad</button>
-      {ctx.totalAmount}
       {DUMMY_MEALS.map((item) => (
         <Card listitem={item}></Card>
       ))}
