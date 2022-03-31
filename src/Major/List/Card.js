@@ -3,7 +3,6 @@ import { useContext, useRef, useState } from "react";
 
 const Card = (props) => {
   const inputQuantityValue = useRef();
-  // use context here
 
   const ctx = useContext(CartContext);
 
