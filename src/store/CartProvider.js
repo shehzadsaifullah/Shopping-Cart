@@ -13,6 +13,7 @@ const CartProvider = (props) => {
   // const [itemPrice, setItemPrice] = useState();
   const [total, setTotal] = useState();
   const setCartItem = (name, quantity, price) => {
+    console.log(item);
     setItem(...item, {
       cartItemname: name,
       cartItemquantity: quantity,

@@ -6,7 +6,7 @@ const Card = (props) => {
   // use context here
   const ctx = useContext(CartContext);
 
-  const addToCartHandler = (e) => {
+  const addToCartHandler = () => {
     console.log(props.listitem.name);
     ctx.setCartItem(
       props.listitem.name,
