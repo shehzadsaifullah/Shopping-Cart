@@ -4,9 +4,11 @@ import { useContext, useRef, useState } from "react";
 const Card = (props) => {
   const inputQuantityValue = useRef();
   // use context here
+
   const ctx = useContext(CartContext);
 
   const addToCartHandler = (e) => {
+    console.log(props.listitem.name);
     ctx.setCartItem(
       props.listitem.name,
       inputQuantityValue.current.value,

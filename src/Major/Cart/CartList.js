@@ -4,10 +4,10 @@ import CartContext from "../../store/cart-context";
 const Cartlist = () => {
   const ctx = useContext(CartContext);
 
-  const name = ctx.cartitems.cartItemname[0];
-  // const quantity = ctx.cartitemQuantity;
-  // const price = ctx.cartItemPrice;
-  // const total = ctx.totalAmount;
+  const name = ctx.cartitem.cartItemname;
+  const quantity = ctx.cartitem.cartItemquantity;
+  const price = ctx.cartitem.cartItemprice;
+  const total = ctx.totalAmount;
   // const itemNumbers = ctx.cartitem.reduce((curNumber, item) => {
   //   return curNumber + item.quantity;
   // }, 0);
