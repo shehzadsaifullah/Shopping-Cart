@@ -11,16 +11,18 @@ const Cartlist = () => {
 
   // const newListArray = [name, quantity, price];
 
-  // const [cartListitems, setCartListitems] = useState([]);
-  // setCartListitems([...cartListitems, newListArray]);
+  const [cartListitems, setCartListitems] = useState([]);
 
-  // useEffect(() => {
-  //   setCartListitems(newListArray);
-  // }, []);
+  console.log(cartListitems);
+  useEffect(() => {
+    setCartListitems((oldcart) => {
+      return [ctx.cartitem, ...oldcart];
+    });
+  }, [ctx.cartitem]);
 
   return (
     <div>
-      <h3>Name: {ctx.cartitem.cartItemname}</h3>
+      <h3>Name: {name}</h3>
       <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
       <h3>Price: {ctx.cartitem.cartItemprice}</h3>
       <h3>Total: {total}</h3>

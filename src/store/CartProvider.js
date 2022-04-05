@@ -28,10 +28,10 @@ const CartProvider = (props) => {
     setCartItem: setCartItem,
     setTotalAmount: setTotalAmount,
   };
-
+  // console.log(item);
   useEffect(() => {
-    setItem(defaultObjectforContext);
-  }, []);
+    setItem(item);
+  }, [item]);
 
   return (
     <CartContext.Provider value={cartContext}>
