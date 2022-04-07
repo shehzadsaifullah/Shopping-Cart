@@ -20,12 +20,18 @@ const Cartlist = () => {
     });
   }, [ctx.cartitem]);
 
+  /* <h3>Name: {name}</h3>
+<h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
+<h3>Price: {ctx.cartitem.cartItemprice}</h3>
+<h3>Total: {total}</h3>*/
+
   return (
     <div>
-      <h3>Name: {name}</h3>
-      <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
-      <h3>Price: {ctx.cartitem.cartItemprice}</h3>
-      <h3>Total: {total}</h3>
+      <ul>
+        {cartListitems.map((item) => (
+          <li key={item.price}>{item.name}</li>
+        ))}
+      </ul>
     </div>
   );
 };

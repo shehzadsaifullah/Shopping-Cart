@@ -1,12 +1,8 @@
 import React from "react";
 
 const CartContext = React.createContext({
-  cartitem: {
-    cartItemname: "111",
-    cartItemquantity: "",
-    cartItemprice: "",
-  },
-  totalAmount: 10,
+  cartitem: [],
+  totalAmount: 0,
   setCartItem: () => {},
   setTotalAmount: () => {},
 });
