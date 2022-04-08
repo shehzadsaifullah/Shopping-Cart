@@ -23,15 +23,20 @@ const Cartlist = () => {
   /* <h3>Name: {name}</h3>
 <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
 <h3>Price: {ctx.cartitem.cartItemprice}</h3>
-<h3>Total: {total}</h3>*/
+<h3>Total: {total}</h3>
 
-  return (
-    <div>
-      <ul>
+ <ul>
         {cartListitems.map((item) => (
           <li key={item.price}>{item.name}</li>
         ))}
-      </ul>
+      </ul>*/
+
+  return (
+    <div>
+      <h3>Name: {name}</h3>
+      <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
+      <h3>Price: {ctx.cartitem.cartItemprice}</h3>
+      <h3>Total: {total}</h3>
     </div>
   );
 };
