@@ -13,13 +13,12 @@ const Cartlist = () => {
 
   const [cartListitems, setCartListitems] = useState([]);
 
-  console.log(cartListitems);
   useEffect(() => {
     setCartListitems((oldcart) => {
       return [ctx.cartitem, ...oldcart];
     });
   }, [ctx.cartitem]);
-
+  console.log(cartListitems);
   /* <h3>Name: {name}</h3>
 <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
 <h3>Price: {ctx.cartitem.cartItemprice}</h3>
@@ -33,10 +32,21 @@ const Cartlist = () => {
 
   return (
     <div>
-      <h3>Name: {name}</h3>
-      <h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
-      <h3>Price: {ctx.cartitem.cartItemprice}</h3>
-      <h3>Total: {total}</h3>
+      <div>
+        {cartListitems.map((item) => (
+          <ul>
+            <li>{item.cartItemname}</li>
+            <li>{item.cartItemquantity}</li>
+            <li>{item.cartItemprice}</li>
+          </ul>
+        ))}
+      </div>
+      <div>
+        <h3>Name: {name}</h3>
+        <h3>Quantity: {quantity}</h3>
+        <h3>Price: {price}</h3>
+        <h3>Total: {total}</h3>
+      </div>
     </div>
   );
 };

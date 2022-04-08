@@ -2,11 +2,11 @@ import CartContext from "./cart-context";
 import { useState, useEffect } from "react";
 
 const CartProvider = (props) => {
-  const defaultObjectforContext = {
-    cartItemname: "",
-    cartItemquantity: "",
-    cartItemprice: "",
-  };
+  // const defaultObjectforContext = {
+  //   cartItemname: "",
+  //   cartItemquantity: "",
+  //   cartItemprice: "",
+  // };
   const [item, setItem] = useState({});
   const [total, setTotal] = useState();
 
