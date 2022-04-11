@@ -13,7 +13,8 @@ const Card = (props) => {
       inputQuantityValue.current.value,
       props.listitem.price
     );
-    ctx.setTotalAmount();
+    const totalamount = inputQuantityValue.current.value * props.listitem.price;
+    ctx.setTotalAmount(totalamount);
   };
   return (
     <div>

@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
+import Cartindi from "./Cartindi";
 
 const Cartlist = () => {
   const ctx = useContext(CartContext);
@@ -34,11 +35,7 @@ const Cartlist = () => {
     <div>
       <div>
         {cartListitems.map((item) => (
-          <ul>
-            <li>{item.cartItemname}</li>
-            <li>{item.cartItemquantity}</li>
-            <li>{item.cartItemprice}</li>
-          </ul>
+          <Cartindi item={item} />
         ))}
       </div>
       <div>

@@ -1,0 +1,12 @@
+.unorderedlist {
+  text-align: left;
+  font-weight: 550;
+  color: rgb(0, 0, 0);
+  background: #4d2b90;
+  box-shadow: 0 2px 8px regba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  width: auto;
+  padding: 10px;
+  margin: 20px;
+  font-family: sans-serif;
+}
