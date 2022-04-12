@@ -22,11 +22,17 @@ const CartProvider = (props) => {
   const setTotalAmount = (ttl) => {
     setTotal((ttl += total));
   };
+
+  const removeCartItem = () => {};
+  const addCartItem = (name, quantity, price) => {};
+
   const cartContext = {
     cartitem: item,
     totalAmount: total,
     setCartItem: setCartItem,
     setTotalAmount: setTotalAmount,
+    addCartItem: addCartItem,
+    removeCartItem: removeCartItem,
   };
   // console.log(item);
   useEffect(() => {
