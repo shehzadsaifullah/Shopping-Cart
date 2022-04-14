@@ -19,23 +19,14 @@ const Cartlist = () => {
       return [ctx.cartitem, ...oldcart];
     });
   }, [ctx.cartitem]);
-  console.log(cartListitems);
-  /* <h3>Name: {name}</h3>
-<h3>Quantity: {ctx.cartitem.cartItemquantity}</h3>
-<h3>Price: {ctx.cartitem.cartItemprice}</h3>
-<h3>Total: {total}</h3>
 
- <ul>
-        {cartListitems.map((item) => (
-          <li key={item.price}>{item.name}</li>
-        ))}
-      </ul>*/
+  const additemHandler = () => {};
 
   return (
     <div>
       <div>
         {cartListitems.map((item) => (
-          <Cartindi item={item} />
+          <Cartindi item={item} addButton={additemHandler} />
         ))}
       </div>
       <div>
