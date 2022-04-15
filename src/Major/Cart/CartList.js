@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
 import Cartindi from "./Cartindi";
+import React from "react";
 
 const Cartlist = () => {
   const ctx = useContext(CartContext);
@@ -20,13 +21,24 @@ const Cartlist = () => {
     });
   }, [ctx.cartitem]);
 
-  const additemHandler = () => {};
+  // const additemHandler = (id) => {
+  //   setCartListitems((oldcart) => {
+  //     return oldcart.filter((item) => item.id !== id);
+  //   });
+  // };
+  const additemHandler = (id) => {
+    cartListitems.map((item) => {
+      if (item.cartItemId === id) {
+        setCartItem((oldcart) => {});
+      }
+    });
+  };
 
   return (
     <div>
       <div>
         {cartListitems.map((item) => (
-          <Cartindi item={item} addButton={additemHandler} />
+          <Cartindi item={item} addButton={() => additemHandler(item.id)} />
         ))}
       </div>
       <div></div>

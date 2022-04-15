@@ -9,6 +9,7 @@ const Card = (props) => {
   const addToCartHandler = (e) => {
     console.log(props.listitem.name);
     ctx.setCartItem(
+      props.listitem.id,
       props.listitem.name,
       inputQuantityValue.current.value,
       props.listitem.price

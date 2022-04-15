@@ -4,7 +4,7 @@ import CartContext from "../../store/cart-context";
 const Cartindi = (props) => {
   const ctx = useContext(CartContext);
   const addButtonHandler = () => {
-    props.addbutton();
+    props.addButton();
   };
   //access add and delete items from cart through new function in contextprovider
   return (
