@@ -29,12 +29,7 @@ const Cartlist = () => {
           <Cartindi item={item} addButton={additemHandler} />
         ))}
       </div>
-      <div>
-        <h3>Name: {name}</h3>
-        <h3>Quantity: {quantity}</h3>
-        <h3>Price: {price}</h3>
-        <h3>Total: {total}</h3>
-      </div>
+      <div></div>
     </div>
   );
 };
