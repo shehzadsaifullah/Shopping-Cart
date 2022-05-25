@@ -29,7 +29,7 @@ const Cartlist = () => {
   const additemHandler = (id) => {
     cartListitems.map((item) => {
       if (item.cartItemId === id) {
-        setCartItem((oldcart) => {});
+        setCartListitems((oldcart) => {});
       }
     });
   };
