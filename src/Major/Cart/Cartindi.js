@@ -10,6 +10,7 @@ const Cartindi = (props) => {
   return (
     <ul className={classes.unorderedlist}>
       <div>
+        <div>{props.item.cartItemId}</div>
         <div>{props.item.cartItemname}</div>
         <div>{props.item.cartItemquantity}</div>
         <div>{props.item.cartItemprice}</div>

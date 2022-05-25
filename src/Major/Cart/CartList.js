@@ -21,6 +21,7 @@ const Cartlist = () => {
     });
   }, [ctx.cartitem]);
 
+  console.log(ctx.totalAmount);
   // const additemHandler = (id) => {
   //   setCartListitems((oldcart) => {
   //     return oldcart.filter((item) => item.id !== id);
@@ -36,6 +37,7 @@ const Cartlist = () => {
 
   return (
     <div>
+      <div>{ctx.totalAmount}</div>
       <div>
         {cartListitems.map((item) => (
           <Cartindi item={item} addButton={() => additemHandler(item.id)} />
