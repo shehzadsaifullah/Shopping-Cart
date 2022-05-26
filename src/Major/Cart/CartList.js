@@ -6,13 +6,6 @@ import React from "react";
 const Cartlist = () => {
   const ctx = useContext(CartContext);
 
-  const name = ctx.cartitem.cartItemname;
-  const quantity = ctx.cartitem.cartItemquantity;
-  const price = ctx.cartitem.cartItemprice;
-  const total = ctx.totalAmount;
-
-  // const newListArray = [name, quantity, price];
-
   const [cartListitems, setCartListitems] = useState([]);
 
   useEffect(() => {
@@ -22,15 +15,19 @@ const Cartlist = () => {
   }, [ctx.cartitem]);
 
   console.log(ctx.totalAmount);
-  // const additemHandler = (id) => {
-  //   setCartListitems((oldcart) => {
-  //     return oldcart.filter((item) => item.id !== id);
-  //   });
-  // };
+
   const additemHandler = (id) => {
     cartListitems.map((item) => {
       if (item.cartItemId === id) {
-        setCartListitems((oldcart) => {});
+        //setCartListitems((oldcart) => {});
+        const x = item.cartItemquantity + 1;
+        console.log(x);
+        ctx.setCartItem(
+          item.cartItemId,
+          item.cartItemname,
+          x,
+          item.cartItemprice
+        );
       }
     });
   };

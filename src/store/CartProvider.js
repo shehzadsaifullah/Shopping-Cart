@@ -25,7 +25,9 @@ const CartProvider = (props) => {
   };
 
   const removeCartItem = () => {};
-  const addCartItem = (name, quantity, price) => {};
+  const addCartItem = (id, name, quantity, price) => {
+    console.log("hello add button");
+  };
 
   const cartContext = {
     cartitem: item,
