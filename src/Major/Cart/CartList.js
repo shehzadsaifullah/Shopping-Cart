@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/cart-context";
-import Cartindi from "./Cartindi";
+import classes from "./Cartindi.module.css";
 import React from "react";
 
 const Cartlist = () => {
@@ -14,22 +14,22 @@ const Cartlist = () => {
     });
   }, [ctx.cartitem]);
 
-  console.log(ctx.totalAmount);
+  //console.log(ctx.totalAmount);
 
   const additemHandler = (id) => {
-    cartListitems.map((item) => {
-      if (item.cartItemId === id) {
-        //setCartListitems((oldcart) => {});
-        const x = item.cartItemquantity + 1;
-        console.log(x);
-        ctx.setCartItem(
-          item.cartItemId,
-          item.cartItemname,
-          x,
-          item.cartItemprice
-        );
-      }
-    });
+    // cartListitems.map((item) => {
+    //   if (item.cartItemId === id) {
+    //     //setCartListitems((oldcart) => {});
+    //     const x = item.cartItemquantity + 1;
+    //     // console.log(x);
+    //     ctx.addCartItem(
+    //       item.cartItemId,
+    //       item.cartItemname,
+    //       x,
+    //       item.cartItemprice
+    //     );
+    //   }
+    // });
   };
 
   return (
@@ -37,10 +37,17 @@ const Cartlist = () => {
       <div>{ctx.totalAmount}</div>
       <div>
         {cartListitems.map((item) => (
-          <Cartindi item={item} addButton={() => additemHandler(item.id)} />
+          <ul className={classes.unorderedlist}>
+            <div>{item.cartItemId}</div>
+            <div>{item.cartItemname}</div>
+            <div>{item.cartItemquantity}</div>
+            <div>{item.cartItemprice}</div>
+            <div>
+              <button onClick={additemHandler}>add button</button>
+            </div>
+          </ul>
         ))}
       </div>
-      <div></div>
     </div>
   );
 };
