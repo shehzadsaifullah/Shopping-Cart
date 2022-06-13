@@ -17,19 +17,19 @@ const Cartlist = () => {
   //console.log(ctx.totalAmount);
 
   const additemHandler = (id) => {
-    // cartListitems.map((item) => {
-    //   if (item.cartItemId === id) {
-    //     //setCartListitems((oldcart) => {});
-    //     const x = item.cartItemquantity + 1;
-    //     // console.log(x);
-    //     ctx.addCartItem(
-    //       item.cartItemId,
-    //       item.cartItemname,
-    //       x,
-    //       item.cartItemprice
-    //     );
-    //   }
-    // });
+    cartListitems.map((item) => {
+      if (item.cartItemId === id) {
+        //     //setCartListitems((oldcart) => {});
+        const x = item.cartItemquantity + 1;
+        console.log(x);
+        ctx.addCartItem(
+          item.cartItemId,
+          item.cartItemname,
+          x,
+          item.cartItemprice
+        );
+      }
+    });
   };
 
   return (
