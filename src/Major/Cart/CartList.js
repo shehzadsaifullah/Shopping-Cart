@@ -15,7 +15,7 @@ const Cartlist = () => {
   }, [ctx.cartitem]);
 
   //console.log(ctx.totalAmount);
-
+  //this should increment the item if add button is in pressed in cart
   const additemHandler = (id) => {
     cartListitems.map((item) => {
       if (item.cartItemId === id) {

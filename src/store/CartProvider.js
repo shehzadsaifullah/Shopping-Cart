@@ -10,6 +10,7 @@ const CartProvider = (props) => {
   const [item, setItem] = useState({});
   const [total, setTotal] = useState(0);
 
+  //this function should add items to the cart context from list of food items
   const setCartItem = (id, name, quantity, price) => {
     setItem({
       ...item,
@@ -20,6 +21,7 @@ const CartProvider = (props) => {
     });
   };
 
+  //update the total cart cash when item is add to cart
   const setTotalAmount = (ttl) => {
     setTotal((ttl += total));
   };
